@@ -30,9 +30,9 @@ class Task extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cat', 'title_task', 'desc_task', 'lavel', 'inactive'], 'required'],
-            [['lavel', 'inactive'], 'integer'],
-            [['cat', 'title_task', 'desc_task'], 'string', 'max' => 255],
+            [['cat', 'title_task', 'desc_task', 'lavel', 'inactive','period','lead_time','time'], 'required'],
+            [['lavel', 'inactive','period','lead_time','time'], 'integer'],
+            [['cat', 'title_task'], 'string', 'max' => 255],
         ];
     }
 
@@ -48,6 +48,9 @@ class Task extends \yii\db\ActiveRecord
             'desc_task' => 'Описание задания',
             'lavel' => 'Уровень сложности',
             'inactive' => 'Активно ? ',
+            'period' => 'period',
+            'lead_time' => 'lead_time',
+            'time' => 'time',
         ];
     }
 }

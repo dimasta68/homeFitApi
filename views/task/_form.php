@@ -21,6 +21,7 @@ use mihaildev\ckeditor\CKEditor;
         'editorOptions' => [
             'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
             'inline' => false, //по умолчанию false
+            'maxlength' => true
         ],
     ]);?>
 
@@ -35,7 +36,21 @@ use mihaildev\ckeditor\CKEditor;
         '2' => 'Не активно',
         '3' => 'Приостановлено',
     ]); ?>
-
+   <?= $form->field($model, 'period')->dropDownList([
+        '1' => 'ежедневно',
+        '2' => 'еженедельно',
+        '3' => 'ежемесячно',
+    ]); ?>
+       <?= $form->field($model, 'lead_time')->dropDownList([
+        '1' => 'утро',
+        '2' => 'день',
+        '3' => 'вечер',
+    ]); ?>
+           <?= $form->field($model, 'time')->dropDownList([
+        '1' => '21 день',
+        '2' => '12 недель',
+        '3' => '24 недели',
+    ]); ?>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

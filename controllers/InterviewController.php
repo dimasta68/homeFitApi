@@ -3,8 +3,8 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\interview;
-use app\models\interviewSearch;
+use app\models\Interview;
+use app\models\InterviewSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +35,7 @@ class InterviewController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new interviewSearch();
+        $searchModel = new InterviewSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $this->layout = 'dash';
         return $this->render('index', [

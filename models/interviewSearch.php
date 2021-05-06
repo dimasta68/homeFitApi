@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\interview;
+use app\models\Interview;
 
 /**
  * interviewSearch represents the model behind the search form of `app\models\interview`.
  */
-class interviewSearch extends interview
+class InterviewSearch extends interview
 {
     /**
      * {@inheritdoc}
